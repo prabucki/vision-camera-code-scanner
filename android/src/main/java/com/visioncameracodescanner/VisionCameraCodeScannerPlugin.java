@@ -15,7 +15,7 @@ import android.media.Image;
 
 import com.mrousavy.camera.frameprocessor.Frame;
 import com.mrousavy.camera.frameprocessor.FrameProcessorPlugin;
-import com.mrousavy.camera.parsers.Orientation;
+import com.mrousavy.camera.types.Orientation;
 
 import androidx.annotation.NonNull;
 import org.jetbrains.annotations.Nullable;
