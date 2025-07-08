@@ -1,4 +1,4 @@
-import { Frame, useFrameProcessor } from 'react-native-vision-camera-old';
+import { FrameOld, useFrameProcessor } from 'react-native-vision-camera-old';
 import { useState } from 'react';
 import { runOnJS } from 'react-native-reanimated';
 
@@ -12,7 +12,7 @@ import {
 export function useScanBarcodes(
   types: BarcodeFormat[],
   options?: CodeScannerOptions
-): [(frame: Frame) => void, Barcode[], number, number] {
+): [(frame: FrameOld) => void, Barcode[], number, number] {
   const [barcodes, setBarcodes] = useState<Barcode[]>([]);
   const [frameWidth, setFrameWidth] = useState<number>(1);
   const [frameHeight, setFrameHeight] = useState<number>(1);

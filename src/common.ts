@@ -1,4 +1,4 @@
-import type { Frame } from 'react-native-vision-camera-old';
+import type { FrameOld } from 'react-native-vision-camera-old';
 
 /**
  * @see https://developers.google.com/android/reference/com/google/mlkit/vision/barcode/Barcode.BarcodeFormat
@@ -298,7 +298,7 @@ export interface CodeScannerOptions {
  * @returns Detected barcodes from MLKit
  */
 export function scanBarcodes(
-  frame: Frame,
+  frame: FrameOld,
   types: BarcodeFormat[],
   options?: CodeScannerOptions
 ): Barcode[] {
