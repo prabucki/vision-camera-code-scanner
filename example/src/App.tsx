@@ -5,8 +5,8 @@ import { StyleSheet, Text } from 'react-native';
 import {
   useCameraDevices,
   useFrameProcessor,
-} from 'react-native-vision-camera';
-import { Camera } from 'react-native-vision-camera';
+} from 'react-native-vision-camera-old';
+import { Camera } from 'react-native-vision-camera-old';
 import {
   scanBarcodes,
   BarcodeFormat,
