@@ -303,7 +303,7 @@ export function scanBarcodes(
   options?: CodeScannerOptions
 ): Barcode[] {
   'worklet';
-  // @ts-ignore
+  // @ts-ignore - __scanCodes is a native worklet function injected at runtime
   // eslint-disable-next-line no-undef
   return __scanCodes(frame, types, options);
 }

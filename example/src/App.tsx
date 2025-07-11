@@ -14,7 +14,6 @@ import {
   Barcode,
 } from 'vision-camera-code-scanner';
 
-
 export default function App() {
   const [hasPermission, setHasPermission] = React.useState(false);
   const [barcodes, setBarcodes] = React.useState<Barcode[]>([]);

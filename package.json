@@ -1,6 +1,7 @@
 {
   "name": "vision-camera-code-scanner",
   "version": "0.3.0",
+  "type": "module",
   "description": "VisionCamera Frame Processor Plugin to read barcodes using MLKit Vision Barcode Scanning",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -50,11 +51,14 @@
     "react-native-reanimated": "3.18.0",
     "react-native-vision-camera-old": "github:prabucki/react-native-vision-camera-old#2.17.3",
     "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.30.1",
     "@react-native-community/eslint-config": "^3.2.0",
     "@release-it/conventional-changelog": "^10.0.1",
     "@types/jest": "^30.0.0",
     "@types/react": "^19.1.8",
     "@types/react-native": "0.73.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
     "commitlint": "^19.8.1",
     "eslint": "^9.30.1",
     "eslint-config-prettier": "^10.1.5",
@@ -93,29 +97,7 @@
       "release": false
     }
   },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@react-native-community",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
-  },
-  "eslintIgnore": [
-    "node_modules/",
-    "lib/"
-  ],
+
   "prettier": {
     "quoteProps": "consistent",
     "singleQuote": true,
