@@ -17,7 +17,7 @@ export function useScanBarcodes(
   const [frameWidth, setFrameWidth] = useState<number>(1);
   const [frameHeight, setFrameHeight] = useState<number>(1);
 
-  const frameProcessor = useFrameProcessor((frame) => {
+  const frameProcessor = useFrameProcessor((frame: FrameOld) => {
     'worklet';
     const detectedBarcodes = scanBarcodes(frame, types, options);
     runOnJS(setBarcodes)(detectedBarcodes);
