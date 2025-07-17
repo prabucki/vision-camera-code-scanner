@@ -5,9 +5,55 @@ PODS:
   - FBLazyVector (0.80.1)
   - fmt (11.0.2)
   - glog (0.3.5)
+  - GoogleDataTransport (10.1.0):
+    - nanopb (~> 3.30910.0)
+    - PromisesObjC (~> 2.4)
+  - GoogleMLKit/BarcodeScanning (9.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitBarcodeScanning (~> 8.0.0)
+  - GoogleMLKit/MLKitCore (9.0.0):
+    - MLKitCommon (~> 14.0.0)
+  - GoogleToolboxForMac/Defines (4.2.1)
+  - GoogleToolboxForMac/Logger (4.2.1):
+    - GoogleToolboxForMac/Defines (= 4.2.1)
+  - "GoogleToolboxForMac/NSData+zlib (4.2.1)":
+    - GoogleToolboxForMac/Defines (= 4.2.1)
+  - GoogleUtilities/Environment (8.1.0):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (8.1.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (8.1.0)
+  - GoogleUtilities/UserDefaults (8.1.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GTMSessionFetcher/Core (3.5.0)
   - hermes-engine (0.80.1):
     - hermes-engine/Pre-built (= 0.80.1)
   - hermes-engine/Pre-built (0.80.1)
+  - MLImage (1.0.0-beta8)
+  - MLKitBarcodeScanning (8.0.0):
+    - MLKitCommon (~> 14.0)
+    - MLKitVision (~> 10.0)
+  - MLKitCommon (14.0.0):
+    - GoogleDataTransport (~> 10.0)
+    - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
+    - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
+    - GoogleUtilities/Logger (~> 8.0)
+    - GoogleUtilities/UserDefaults (~> 8.0)
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
+  - MLKitVision (10.0.0):
+    - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
+    - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
+    - MLImage (= 1.0.0-beta8)
+    - MLKitCommon (~> 14.0)
+  - nanopb (3.30910.0):
+    - nanopb/decode (= 3.30910.0)
+    - nanopb/encode (= 3.30910.0)
+  - nanopb/decode (3.30910.0)
+  - nanopb/encode (3.30910.0)
+  - PromisesObjC (2.4.0)
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -2302,6 +2348,9 @@ PODS:
     - SocketRocket
     - Yoga
   - SocketRocket (0.7.1)
+  - vision-camera-code-scanner (0.3.0):
+    - GoogleMLKit/BarcodeScanning
+    - React-Core
   - VisionCameraOld (2.17.3):
     - React
     - React-callinvoker
@@ -2385,11 +2434,23 @@ DEPENDENCIES:
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - SocketRocket (~> 0.7.1)
+  - vision-camera-code-scanner (from `../..`)
   - VisionCameraOld (from `../node_modules/react-native-vision-camera-old`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
+    - GoogleDataTransport
+    - GoogleMLKit
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - MLImage
+    - MLKitBarcodeScanning
+    - MLKitCommon
+    - MLKitVision
+    - nanopb
+    - PromisesObjC
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -2540,6 +2601,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  vision-camera-code-scanner:
+    :path: "../.."
   VisionCameraOld:
     :path: "../node_modules/react-native-vision-camera-old"
   Yoga:
@@ -2552,8 +2615,19 @@ SPEC CHECKSUMS:
   FBLazyVector: 09f03e4b6f42f955734b64a118f86509cc719427
   fmt: a40bb5bd0294ea969aaaba240a927bd33d878cdd
   glog: 5683914934d5b6e4240e497e0f4a3b42d1854183
+  GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
+  GoogleMLKit: b1eee21a41c57704fe72483b15c85cb2c0cd7444
+  GoogleToolboxForMac: d1a2cbf009c453f4d6ded37c105e2f67a32206d8
+  GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
+  GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
   hermes-engine: 4f07404533b808de66cf48ac4200463068d0e95a
-  RCT-Folly: 59ec0ac1f2f39672a0c6e6cecdd39383b764646f
+  MLImage: 0de5c6c2bf9e93b80ef752e2797f0836f03b58c0
+  MLKitBarcodeScanning: 39de223e7b1b8a8fbf10816a536dd292d8a39343
+  MLKitCommon: 47d47b50a031d00db62f1b0efe5a1d8b09a3b2e6
+  MLKitVision: 39a5a812db83c4a0794445088e567f3631c11961
+  nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  RCT-Folly: 846fda9475e61ec7bcbf8a3fe81edfcaeb090669
   RCTDeprecation: efa5010912100e944a7ac9a93a157e1def1988fe
   RCTRequired: bbc4cf999ddc4a4b076e076c74dd1d39d0254630
   RCTTypeSafety: d877728097547d0a37786cc9130c43ad71739ac3
@@ -2620,9 +2694,10 @@ SPEC CHECKSUMS:
   RNReanimated: 4f8f7e87f1e9869d2373416c3c8aabe614e3aeee
   RNScreens: 2ea5696f2d2051bfbc780a844a590f3c1c913c60
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
+  vision-camera-code-scanner: 1a823225ff6e8862dc8cf3f114135b7959fd08b7
   VisionCameraOld: 3fe77d8160511c20f0534c894b5af5c122588b24
   Yoga: 703055a9f39562521cdb8657162dfd80f8c174c3
 
-PODFILE CHECKSUM: 5ae3c3fd5ba3828e5bc6cca25d6e31a5134f3fc4
+PODFILE CHECKSUM: e1f5a8ae51c4e5d3a32fef75b418e505b75facf0
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.15.2
