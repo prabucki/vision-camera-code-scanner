@@ -11,11 +11,17 @@ require Pod::Executable.execute_command('node', ['-p',
 platform :ios, '15.5'
 prepare_react_native_project!
 
-linkage = ENV['USE_FRAMEWORKS']
-if linkage != nil
-  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
-  use_frameworks! :linkage => linkage.to_sym
-end
+# Firebase requirement
+use_frameworks! :linkage => :static
+
+# Fix for gRPC issue in React Native 0.76+
+$RNFirebaseAsStaticFramework = true
+
+# linkage = ENV['USE_FRAMEWORKS']
+# if linkage != nil
+#   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+#   use_frameworks! :linkage => linkage.to_sym
+# end
 
 target 'VisionCameraCodeScannerExample' do
   config = use_native_modules!
@@ -29,6 +35,13 @@ target 'VisionCameraCodeScannerExample' do
   pod 'vision-camera-code-scanner', :path => '../..'
 
   post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      if target.name == 'RNReanimated'
+        target.build_configurations.each do |config|
+          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+        end
+      end
+    end
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
       installer,
