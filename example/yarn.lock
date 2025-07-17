@@ -6117,9 +6117,9 @@ react-native-screens@^4.8.0:
     react-native-is-edge-to-edge "^1.1.7"
     warn-once "^0.1.0"
 
-"react-native-vision-camera-old@github:prabucki/react-native-vision-camera-old#2.17.3":
-  version "2.17.3"
-  resolved "https://codeload.github.com/prabucki/react-native-vision-camera-old/tar.gz/bd386d5688106bf71be5c79dfac241e0fcdb7fd8"
+"react-native-vision-camera-old@github:prabucki/react-native-vision-camera-old#static-framework":
+  version "2.17.2"
+  resolved "https://codeload.github.com/prabucki/react-native-vision-camera-old/tar.gz/bfc90f95b518b186fd20d0fc4bc0c2e76351ac0b"
 
 react-native@^0.80.1:
   version "0.80.1"
